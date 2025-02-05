@@ -1,0 +1,195 @@
+/* General body styles */
+body {
+    font-family: 'Poppins', Arial, sans-serif; /* Elegant and modern font */
+    margin: 0;
+    padding: 0;
+    background: url('{{ url_for("static", filename="images/background.jpeg") }}') no-repeat center center fixed; /* Path to the image */
+    background-size: cover; /* Ensures the image fully covers the viewport */
+    color: #444;
+    text-align: center;
+    line-height: 1.6;
+    overflow-x: hidden;
+}
+/* Header styles */
+header {
+    background: linear-gradient(to right, black, #333); /* Black gradient for the header */
+    color: white;
+    padding: 20px 0;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.15);
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+}
+
+header h1 {
+    font-size: 3rem;
+    margin: 0;
+    font-weight: bold;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+    letter-spacing: 2px;
+}
+
+header h1 i {
+    color: #ffe74c; /* Yellow for contrast */
+}
+
+header h1::after {
+    content: "🌿";
+    margin-left: 10px;
+    font-size: 2.5rem;
+}
+
+/* Main container */
+.container {
+    padding: 40px;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+/* Upload form styles */
+.upload-section {
+    background: #ffffff; /* Bright white card */
+    padding: 30px;
+    border-radius: 12px;
+    box-shadow: 0 6px 18px rgba(0, 0, 0, 0.1);
+    margin: 40px auto;
+    max-width: 600px;
+    text-align: center;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    position: relative;
+    overflow: hidden;
+}
+
+.upload-section:hover {
+    transform: scale(1.02);
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.2);
+}
+
+.upload-section h2 {
+    font-size: 2.5rem;
+    color: black; /* Black for section titles */
+    margin-bottom: 20px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+}
+
+.upload-section h2::before {
+    content: "🍃";
+    font-size: 1.8rem;
+}
+
+input[type="file"] {
+    padding: 15px;
+    margin-bottom: 20px;
+    border-radius: 10px;
+    border: 2px dashed black; /* Black dashed border */
+    background-color: #f9f9f9;
+    width: 70%;
+    cursor: pointer;
+    font-size: 1.2rem;
+    transition: all 0.3s ease;
+}
+
+input[type="file"]:hover {
+    background-color: #e0f7e9; /* Light green hover background */
+    border-color: #2ecc71; /* Bright green border */
+}
+
+button {
+    padding: 12px 25px;
+    font-size: 1.2rem;
+    background: linear-gradient(135deg, #28a745, #45d68c); /* Green gradient for buttons */
+    color: white;
+    border: none;
+    cursor: pointer;
+    border-radius: 10px;
+    transition: all 0.3s ease;
+    width: 70%;
+    font-weight: bold;
+}
+
+button:hover {
+    background: linear-gradient(135deg, #45d68c, #28a745);
+    transform: translateY(-3px);
+}
+
+/* Prediction result section */
+#predictionResult {
+    margin-top: 30px;
+    font-size: 1.8rem;
+    color: black; /* Black text for results */
+    text-align: center;
+    font-weight: bold;
+    background: #e8f5e9; /* Soft green background */
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+    position: relative;
+}
+
+#predictionResult::before {
+    content: "🌱";
+    position: absolute;
+    top: -10px;
+    left: 10px;
+    font-size: 2rem;
+}
+
+#predictionResult::after {
+    content: "🌱";
+    position: absolute;
+    bottom: -10px;
+    right: 10px;
+    font-size: 2rem;
+}
+
+/* Footer styles */
+footer {
+    background: linear-gradient(to right, black, #333); /* Black gradient for footer */
+    color: white;
+    padding: 25px;
+    text-align: center;
+    margin-top: 40px;
+    box-shadow: 0 -4px 8px rgba(0, 0, 0, 0.1);
+}
+
+footer p {
+    font-size: 1rem;
+    margin: 0;
+    font-weight: 600;
+}
+
+footer p::after {
+    content: "🌳";
+    margin-left: 10px;
+}
+
+/* Responsive design */
+@media (max-width: 768px) {
+    input[type="file"], button {
+        width: 90%;
+    }
+
+    header h1 {
+        font-size: 2.5rem;
+    }
+
+    .upload-section h2 {
+        font-size: 2rem;
+    }
+}
+
+@media (max-width: 480px) {
+    header h1 {
+        font-size: 2rem;
+    }
+
+    .upload-section h2 {
+        font-size: 1.8rem;
+    }
+}

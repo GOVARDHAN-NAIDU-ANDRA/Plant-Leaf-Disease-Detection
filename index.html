@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Plant Leaf Detection</title>
+     <link rel="stylesheet" href="{{ url_for('static', filename='css/styles.css') }}">
+</head>
+<body>
+
+    <header>
+        <h1> Plant Leaf Detection System</h1>
+        <p>Upload a leaf image to detect its condition (HEALTHY,UNHEALTHY).</p>
+    </header>
+
+    <main class="container">
+        <section class="form-container">
+            <h2>Upload Your Leaf Image</h2>
+            <form action="/" method="POST" enctype="multipart/form-data">
+                <label for="file" class="file-label">Choose an Image:</label>
+                <input type="file" name="file" id="file" accept="image/*" required>
+                <button type="submit" class="submit-button">Predict</button>
+            </form>
+        </section>
+
+        <section id="predictionResult" class="prediction-result">
+            <!-- Prediction results and image will be displayed here -->
+        </section>
+    </main>
+
+    <footer>
+        <p>&copy; 2024 Plant Leaf Detection System. All Rights Reserved.</p>
+    </footer>
+
+</body>
+</html>

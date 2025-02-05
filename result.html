@@ -1,0 +1,24 @@
+<!-- templates/result.html -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Prediction Result</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/styles.css') }}">
+</head>
+<body>
+
+    <div class="result-container">
+        <h1>Prediction Result</h1>
+        <p>{{ prediction }}</p>
+        <img src="{{ image_path }}" alt="Uploaded Image">
+        <a href="/">Try another image</a>
+    </div>
+
+    <footer>
+        <p>&copy; 2024 Plant Leaf  Detection System </p>
+    </footer>
+
+</body>
+</html>
